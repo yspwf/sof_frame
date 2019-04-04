@@ -17,7 +17,7 @@ class request{
         $urlarr = explode('/', $url);
         array_shift($urlarr);
         $params = array_slice($urlarr, 3);
-        var_dump($urlarr);
+        var_dump($params);
         //return $this->context($params);
     }
 
