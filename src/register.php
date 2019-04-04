@@ -7,6 +7,7 @@ class register{
     // }
 
     public static function autoload($classname){
+        echo "23423424234";
         echo $classname;
        // $classname = str_replace('\\','/', $classname);
         $basePath = str_replace('\\', DIRECTORY_SEPARATOR, ROOT.DIRECTORY_SEPARATOR.$classname);
