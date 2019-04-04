@@ -3,7 +3,6 @@ namespace sof;
 class route{
 
     public $url;
-    public $params = [];
     private $request;
     private $response;
 
