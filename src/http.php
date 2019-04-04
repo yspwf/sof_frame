@@ -32,8 +32,8 @@ class http{
                    return ;
                }
 
-               echo $request->server['path_info'];
-
+               $pathinfo = $request->server['path_info'];
+               new \sof\route($pathinfo);
                $response->end('hello swoole');
     }
 
