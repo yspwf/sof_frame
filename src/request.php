@@ -16,7 +16,7 @@ class request{
         echo $url;
         $urlarr = explode('/', $url);
         array_shift($urlarr);
-        $params = !empty(array_slice($urlarr, 3)) ? $this->queryContext(array_slice($urlarr, 3)) : array_slice($urlarr, 3);
+        $params = array_slice($urlarr, 3);
         return $this->context($params);
     }
 
