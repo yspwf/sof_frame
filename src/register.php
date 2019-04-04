@@ -26,7 +26,7 @@ class register{
         public static function autoload($class){
             $basePath = str_replace('\\', DIRECTORY_SEPARATOR, ROOT.DIRECTORY_SEPARATOR.$class);
             $file = $basePath.'.php';
-            echo $file;
+            //echo $file;
             if(file_exists($file)){
                 require_once $file;
             }else{
