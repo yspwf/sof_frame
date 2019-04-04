@@ -31,7 +31,10 @@ class http{
                if($request->server['path_info'] == '/favicon.ico'){
                    return ;
                }
-               $response->end('234234');
+
+               echo $request->server['path_info'];
+
+               $response->end('hello swoole');
     }
 
 
