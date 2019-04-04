@@ -14,7 +14,7 @@ class request{
             return false;
         }
         echo $url;
-        $urlarr = explode('/', $this->url);
+        $urlarr = explode('/', $url);
         array_shift($urlarr);
         $params = !empty(array_slice($urlarr, 3)) ? $this->queryContext(array_slice($urlarr, 3)) : array_slice($urlarr, 3);
         return $this->context($params);
@@ -25,10 +25,11 @@ class request{
         if($url == '/favicon.ico'){
             return false;
         }
-        $urlarr = explode('/', $this->url);
+        $urlarr = explode('/',$url);
         array_shift($urlarr);
         return empty($urlarr[0]) ? ['home','index','index'] : array_slice($urlarr, 0, 3);
     }
+
 
     public function context($params){
         $keys = [];
