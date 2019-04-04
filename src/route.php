@@ -6,10 +6,12 @@ class route{
     public $params = [];
 
     public function __construct($url){
+        echo "router11111111111111111";
         $this->url = $url;
     }
 
     public function Context(){
+
         $urlarr = explode('/', $this->url);
         array_shift($urlarr);
         list($module, $controller, $action) = empty($urlarr[0]) ? ['home','index','index'] : array_slice($urlarr, 0, 3);
