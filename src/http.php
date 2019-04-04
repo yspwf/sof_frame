@@ -25,7 +25,7 @@ class http{
 
     public function onWorkerStart($server, $woker_id){
         //spl_autoload_register('\sof\autoload::register');
-        spl_autoload_register('\sof\autoload::autoload');
+        spl_autoload_register('\sof\register::autoload');
     }
 
     public function onRequest($request, $response){
