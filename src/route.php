@@ -12,13 +12,24 @@ class route{
         $this->response = $response;
     }
 
-    public function request(){
+    public function params(){
         $req = new request($this->request);
-        $params = $req->getParams();
-        var_dump($params);
+        return $req->getParams();
     }
 
+    public function controller(){
+        $req = new request($this->request);
+        return $req->getController();
+    }
+
+
     public function Context(){
+        $params = $this->params();
+        $controllers = $this->controller();
+
+        var_dump($params);
+        echo PHP_EOL;
+        var_dump($controllers);
 
         // $urlarr = explode('/', $this->url);
         // array_shift($urlarr);
