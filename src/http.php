@@ -29,15 +29,14 @@ class http{
     }
 
     public function onRequest($request, $response){
-               if($request->server['path_info'] == '/favicon.ico'){
-                   return ;
-               }
+            //    if($request->server['path_info'] == '/favicon.ico'){
+            //        return ;
+            //    }
 
-               $pathinfo = $request->server['path_info'];
-               echo $pathinfo;
+            //    $pathinfo = $request->server['path_info'];
 
-               $route = new route($pathinfo);
-               $route->Context();
+               $route = new route($request, $response);
+               //$route->Context();
                //new \home\user();
                $response->end('hello swoole');
     }
