@@ -3,6 +3,7 @@ namespace sof;
 class register{
 
     public function __construct(){
+        echo "444444444444444444444444";
         spl_autoload_register([$this, 'autoload']);
     }
 
