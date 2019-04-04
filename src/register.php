@@ -24,7 +24,6 @@ class register{
          * 自动加载
          */
         public static function autoload($class){
-            echo "234234234234234234234";
             $basePath = str_replace('\\', DIRECTORY_SEPARATOR, ROOT.DIRECTORY_SEPARATOR.$class);
             $file = $basePath.'.php';
             echo $file;

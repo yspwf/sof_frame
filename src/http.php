@@ -36,7 +36,8 @@ class http{
                $pathinfo = $request->server['path_info'];
                echo $pathinfo;
 
-               $res = new route('/');
+               $route = new route($pathinfo);
+               $route->Context();
                //new \home\user();
                $response->end('hello swoole');
     }
