@@ -1,0 +1,15 @@
+{
+    "name": "ecar/demo",
+    "authors": [
+        {
+            "name": "Yu siping",
+            "email": "846163966@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "sof\\":"src/"
+        }
+    }
+}
