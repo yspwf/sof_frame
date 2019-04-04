@@ -7,6 +7,7 @@ class register{
     }
 
     public function autoload($classname){
+        echo $classname;
        // $classname = str_replace('\\','/', $classname);
         $basePath = str_replace('\\', DIRECTORY_SEPARATOR, ROOT.DIRECTORY_SEPARATOR.$classname);
         $file = $basePath.".php";
