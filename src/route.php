@@ -27,9 +27,17 @@ class route{
         $params = $this->params();
         $controllers = $this->controller();
 
-        var_dump($params);
-        echo PHP_EOL;
-        var_dump($controllers);
+        // var_dump($params);
+        // echo PHP_EOL;
+        // var_dump($controllers);
+
+        list($module, $controller, $action) = $controllers;
+        $class = "\\{$module}\\{$controller}";
+        $object = new $class();
+        if(!is_callable([$object, $action])){
+            throw new \Exception('action is not exist....');
+        }
+        call_user_func_array([$object, $action],[$params]);
 
         // $urlarr = explode('/', $this->url);
         // array_shift($urlarr);

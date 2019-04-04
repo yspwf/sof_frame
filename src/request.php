@@ -13,7 +13,7 @@ class request{
         if($url == '/favicon.ico'){
             return false;
         }
-        echo $url;
+        
         $urlarr = explode('/', $url);
         array_shift($urlarr);
         $params = array_slice($urlarr, 3);
