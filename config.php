@@ -5,7 +5,7 @@ return [
         'port'=>9501,
         'set'=>[
             'worker_num' => 2,
-            'task_worker_num' => 2
+            //'task_worker_num' => 2
         ]
     ],
     'mysql' => [
