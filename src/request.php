@@ -17,7 +17,7 @@ class request{
         $urlarr = explode('/', $url);
         array_shift($urlarr);
         $params = array_slice($urlarr, 3);
-        var_dump($this->context($params));
+        return $this->context($params);
     }
 
     public function getController(){
@@ -28,7 +28,7 @@ class request{
         $urlarr = explode('/',$url);
         array_shift($urlarr);
         $res = empty($urlarr[0]) ? ['home','index','index'] : array_slice($urlarr, 0, 3);
-        var_dump($res);
+        return $res;
     }
 
 
