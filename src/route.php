@@ -6,7 +6,6 @@ class route{
     public $params = [];
 
     public function __construct($url){
-        echo "router11111111111111111";
         $this->url = $url;
     }
 
@@ -15,7 +14,7 @@ class route{
         $urlarr = explode('/', $this->url);
         array_shift($urlarr);
         list($module, $controller, $action) = empty($urlarr[0]) ? ['home','index','index'] : array_slice($urlarr, 0, 3);
-        echo $module."-----".$controller."--------".$action;
+        //echo $module."-----".$controller."--------".$action;
         $params = !empty(array_slice($urlarr, 3)) ? $this->queryContext(array_slice($urlarr, 3)) : array_slice($urlarr, 3);
         $class = "\\{$module}\\{$controller}";
         $object = new $class();
