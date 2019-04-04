@@ -35,7 +35,8 @@ class http{
 
                $pathinfo = $request->server['path_info'];
                echo $pathinfo;
-               new \sof\route('/');
+               
+               new sof\route('/');
                //new \home\user();
                $response->end('hello swoole');
     }
