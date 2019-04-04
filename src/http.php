@@ -29,9 +29,9 @@ class http{
     }
 
     public function onRequest($request, $response){
-            //    if($request->server['path_info'] == '/favicon.ico'){
-            //        return ;
-            //    }
+               if($request->server['path_info'] == '/favicon.ico'){
+                   return ;
+               }
 
             //    $pathinfo = $request->server['path_info'];
 
