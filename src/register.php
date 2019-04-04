@@ -2,11 +2,11 @@
 namespace sof;
 class register{
 
-    public function __construct(){
-        spl_autoload_register([$this, 'autoload']);
-    }
+    // public function __construct(){
+    //     spl_autoload_register([$this, 'autoload']);
+    // }
 
-    public function autoload($classname){
+    public static function autoload($classname){
         echo $classname;
        // $classname = str_replace('\\','/', $classname);
         $basePath = str_replace('\\', DIRECTORY_SEPARATOR, ROOT.DIRECTORY_SEPARATOR.$classname);
