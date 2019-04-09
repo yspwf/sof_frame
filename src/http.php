@@ -39,7 +39,7 @@ class http{
                $route->Context();
                //$route->Context();
                //new \home\user();
-               $response->end('hello swoole');
+               //$response->end('hello swoole');
     }
 
 

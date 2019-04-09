@@ -5,7 +5,7 @@ class controller{
     private $response;
 
     public function test($data){
-        var_dump($data);
+        return $data;
     }
 
     // private $response;

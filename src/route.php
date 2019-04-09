@@ -25,7 +25,7 @@ class route{
         // $response = response::getInstance($this->response);
         // //$response->write($data);
         $response = new response($this->response);
-        //$response->write($data);
+        $response->write($data);
     }
 
     public function Context(){
