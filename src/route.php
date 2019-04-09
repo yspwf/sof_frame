@@ -22,7 +22,7 @@ class route{
     }
 
     public function response($data){
-        $response = new response($this->response);
+        $response = new controller($this->response,$data);
         $response->write($data);
     }
 
@@ -41,7 +41,7 @@ class route{
             throw new \Exception('action is not exist....');
         }
         $request_res = call_user_func_array([$object, $action],[$params]);
-        var_dump($request_res);
+        //var_dump($request_res);
         $this->response($request_res);
 
 
