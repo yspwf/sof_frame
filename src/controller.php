@@ -2,7 +2,9 @@
 namespace sof;
 class controller{
 
-    
+    public function test($data){
+        var_dump($data);
+    }
 
     // private $response;
     // private $data;
