@@ -20,14 +20,18 @@ class connect{
         $this->channel = new \Swoole\Coroutine\Channel(10);
         for($i=0;$i<10;$i++){
             $mysql = new \Swoole\Coroutine\MySQL();
-            $mysql->connect([
+            $result = $mysql->connect([
                 'host'=>'127.0.0.1',
                 'port'=>3306,
                 'user'=>'root',
                 'password'=>'',
                 'database'=>'demo'
             ]);
-            $this->push($mysql);
+            if($result == false){
+                throw new \Exception('db connect fail ........');
+            }else{
+                $this->push($mysql);
+            }
         }
     }
 
@@ -40,7 +44,11 @@ class connect{
     }
 
     public function get(){
-        return $this->channel->pop();
+        $result = $this->channel->pop();
+        if((bool)$result){
+            throw new \Exception('get db source fail ........');
+        }
+        return $result;
     }
 
 }
