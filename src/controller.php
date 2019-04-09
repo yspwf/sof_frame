@@ -1,12 +1,9 @@
 <?php 
 namespace sof;
-class controller{
+class controller extends response{
    
     private $response;
 
-    public function __construct(){
-        $this->response = response::getInstance();
-    }
 
     public function test($data){
         $this->response->write($data);
