@@ -20,18 +20,14 @@ class connect{
         $this->channel = new \Swoole\Coroutine\Channel(100);
         for($i=0;$i<100;$i++){
             $mysql = new \Swoole\Coroutine\MySQL();
-            $result = $mysql->connect([
+            $mysql->connect([
                 'host'=>'127.0.0.1',
                 'port'=>3306,
                 'user'=>'root',
                 'password'=>'',
                 'database'=>'demo'
             ]);
-            if($result == false){
-                throw new \Exception('db connect fail ........');
-            }else{
-                $this->push($mysql);
-            }
+            $this->push($mysql);
         }
     }
 
