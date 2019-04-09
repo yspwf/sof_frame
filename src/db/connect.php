@@ -45,7 +45,7 @@ class connect{
 
     public function get(){
         $result = $this->channel->pop();
-        if((bool)$result){
+        if($result == false){
             throw new \Exception('get db source fail ........');
         }
         return $result;
