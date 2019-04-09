@@ -2,10 +2,18 @@
 namespace sof;
 class response{
 
+    private $instance;
     private $response;
 
     public function __construct($response){
         $this->response = $response;
+    }
+
+    public static function getInstance($response){
+        if(!(self::$instance instanceof self)){
+            self::$instance = new self($response);
+        }
+        return self::$instance;
     }
 
 

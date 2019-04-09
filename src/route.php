@@ -22,7 +22,9 @@ class route{
     }
 
     public function response($data){
-        $response = new controller($this->response,$data);
+        $response = response::getInstance($this->response);
+        $response->write($data);
+        //$response = new controller($this->response,$data);
         //$response->write($data);
     }
 
