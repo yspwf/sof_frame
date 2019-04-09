@@ -36,8 +36,10 @@ class route{
         if(!is_callable([$object, $action])){
             throw new \Exception('action is not exist....');
         }
-        call_user_func_array([$object, $action],[$params]);
+        $request_res = call_user_func_array([$object, $action],[$params]);
+        var_dump($request_res);
 
+        
         // $urlarr = explode('/', $this->url);
         // array_shift($urlarr);
         // list($module, $controller, $action) = empty($urlarr[0]) ? ['home','index','index'] : array_slice($urlarr, 0, 3);
