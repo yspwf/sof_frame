@@ -23,7 +23,7 @@ class route{
 
     public function response($data){
         $response = new controller($this->response,$data);
-        $response->write($data);
+        //$response->write($data);
     }
 
     public function Context(){
