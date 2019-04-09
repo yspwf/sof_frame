@@ -9,7 +9,7 @@ class query{
     }
 
     public function test(){
-        $res = $this->query('select 1+1 as sum');
+        $res = $this->connect->query('select 1+1 as sum');
         return $res;
     }
 
