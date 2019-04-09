@@ -21,6 +21,10 @@ class route{
         return $req->getController();
     }
 
+    public function response($data){
+        $response = new response($this->response);
+        $response->write($data);
+    }
 
     public function Context(){
         $params = $this->params();
@@ -38,8 +42,9 @@ class route{
         }
         $request_res = call_user_func_array([$object, $action],[$params]);
         var_dump($request_res);
+        $this->response($request_res);
 
-        
+
         // $urlarr = explode('/', $this->url);
         // array_shift($urlarr);
         // list($module, $controller, $action) = empty($urlarr[0]) ? ['home','index','index'] : array_slice($urlarr, 0, 3);
