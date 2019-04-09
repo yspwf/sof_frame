@@ -1,9 +1,15 @@
 <?php 
 namespace sof;
 class controller{
+   
+    private $response;
+
+    public function __construct(){
+        $this->response = response::getInstance();
+    }
 
     public function test($data){
-        var_dump($data);
+        $this->response->write($data);
     }
 
     // private $response;
