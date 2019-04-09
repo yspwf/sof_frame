@@ -1,12 +1,11 @@
 <?php 
 namespace sof;
-class controller extends response{
+class controller{
    
     private $response;
 
-
     public function test($data){
-        $this->response->write($data);
+        var_dump($data);
     }
 
     // private $response;
