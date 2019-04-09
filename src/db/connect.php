@@ -6,7 +6,7 @@ class connect{
 
     private $channel;
 
-    public function getInstance(){
+    public static function getInstance(){
         if(!(self::$instance instanceof self)){
             $self = new self();
             $self->connect();
