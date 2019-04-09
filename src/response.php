@@ -9,12 +9,12 @@ class response{
         $this->response = $response;
     }
 
-    public static function getInstance($response=''){
-        if(!(self::$instance instanceof self)){
-            self::$instance = new self($response);
-        }
-        return self::$instance;
-    }
+    // public static function getInstance($response=''){
+    //     if(!(self::$instance instanceof self)){
+    //         self::$instance = new self($response);
+    //     }
+    //     return self::$instance;
+    // }
 
 
     public function write($data){
