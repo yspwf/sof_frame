@@ -2,7 +2,7 @@
 namespace sof;
 class response{
 
-    private $instance;
+    private static $instance;
     private $response;
 
     public function __construct($response){
