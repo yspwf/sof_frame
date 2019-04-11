@@ -19,17 +19,24 @@ class connect{
 
 
     public function __construct(){
-        $this->mysql = new \Swoole\Coroutine\MySQL();
-        $status = $this->mysql->connect([
-                    'host'=>'127.0.0.1',
-                    'port'=>3306,
-                    'user'=>'root',
-                    'password'=>'',
-                    'database'=>'demo']
-                );
-        if(!$status){
-            throw new \Exception('mysql connect is fail ..........');
+        // $this->mysql = new \Swoole\Coroutine\MySQL();
+        // $status = $this->mysql->connect([
+        //             'host'=>'127.0.0.1',
+        //             'port'=>3306,
+        //             'user'=>'root',
+        //             'password'=>'',
+        //             'database'=>'demo']
+        //         );
+        // if(!$status){
+        //     throw new \Exception('mysql connect is fail ..........');
+        // }
+        try{
+            $this->mysql = new \PDO("mysql:host=127.0.0.1;dbname=demo", "root", "");
+        }catch(\PDOException $e){
+            die ("Error!: " . $e->getMessage() . "<br/>");
         }
+        
+
     }
 
     public function query($sql){
