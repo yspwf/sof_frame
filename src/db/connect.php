@@ -40,8 +40,8 @@ class connect{
 
 
     public function connect(){
-        $this->channel = new \Swoole\Coroutine\Channel(500);
-        for($i=0;$i<500;$i++){
+        $this->channel = new \Swoole\Coroutine\Channel(200);
+        for($i=0;$i<200;$i++){
             $mysql = new \Swoole\Coroutine\MySQL();
             $status = $mysql->connect([
                 'host'=>'127.0.0.1',
