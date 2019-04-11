@@ -1,13 +1,13 @@
 <?php 
 namespace sof;
-use \sof\db\connect;
+use \sof\db\query;
 class controller{
    
     private $response;
 
     public function test($data){
-        $query = new connect();
-        $query->query();
+        $query = new query();
+        var_dump($query->test());
         //return $data;
     }
 
