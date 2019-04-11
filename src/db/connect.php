@@ -8,17 +8,17 @@ class connect{
 
     private $mysql;
 
-    public static function getInstance(){
-        if(!(self::$instance instanceof self)){
-            $self = new self();
-            $self->connect();
-            self::$instance = $self;
-        }
-        return self::$instance;
-    }
+    // public static function getInstance(){
+    //     if(!(self::$instance instanceof self)){
+    //         $self = new self();
+    //         //$self->connect();
+    //         self::$instance = $self;
+    //     }
+    //     return self::$instance;
+    // }
 
 
-    public function connect(){
+    public function __construct(){
         $this->mysql = new \Swoole\Coroutine\MySQL();
         $this->mysql->connect([
                     'host'=>'127.0.0.1',
