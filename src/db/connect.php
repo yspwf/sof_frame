@@ -50,10 +50,10 @@ class connect{
                 'password'=>'',
                 'database'=>'demo'
             ]);
-            var_dump($status);
-            // if($status){
-            //     throw new \Exception('mysql connect is fail ..........');
-            // }
+            
+            if(!$status){
+                throw new \Exception('mysql connect is fail ..........');
+            }
             $this->push($mysql);
         }
     }
