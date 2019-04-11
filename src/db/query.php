@@ -9,10 +9,12 @@ class query{
     }
 
     public function test(){
-        $query = $this->connect->get();
-        $res = $query->query('select 1+1 as sum');
-        $this->connect->push($query);
-        return $res;
+        $res = $this->connect->query('select 1+1 as sum');
+        var_dump($res);
+        // $query = $this->connect->get();
+        // $res = $query->query('select 1+1 as sum');
+        // $this->connect->push($query);
+        // return $res;
     }
 
 }
