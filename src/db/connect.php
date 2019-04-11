@@ -40,9 +40,12 @@ class connect{
     }
 
     public function query($sql){
-        $res = $this->mysql->query($sql);
-        $this->mysql->close();
-        return $res;
+        $sql="select 1+1 as sum";  
+        $result = $this->mysql->query($sql); 
+        var_dump($result);
+        // $res = $this->mysql->query($sql);
+        // $this->mysql->close();
+        // return $res;
     }
 
 
