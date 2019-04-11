@@ -7,7 +7,7 @@ class controller{
 
     public function test($data){
         $query = new query();
-        //var_dump($query->test());
+        $query->test();
         //return $data;
     }
 
