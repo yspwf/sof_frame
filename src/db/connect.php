@@ -33,6 +33,7 @@ class connect{
     }
 
     public function query($sql){
+        echo "222222222222222222222222";
         $res = $this->mysql->query($sql);
         $this->mysql->close();
         return $res;
