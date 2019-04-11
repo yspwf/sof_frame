@@ -40,7 +40,8 @@ class connect{
     }
 
     public function query($sql){
-        $sql="select 1+1 as sum";  
+        //$sql="select 1+1 as sum"; 
+        $sql="select * from user";  
         $sqldata = $this->mysql->query($sql); 
         $result = $sqldata->fetch();
         var_dump($result);
